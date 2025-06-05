@@ -1,1 +1,1 @@
-![CI](https://github.com/Aleksandr861/AHJ-The-Goblin-Game/actions/workflows/web.yml/badge.svg)
+![CI](https://github.com/Aleksandr861/AHJ-event-handling/actions/workflows/web.yml/badge.svg)
