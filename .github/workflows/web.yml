@@ -23,9 +23,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.14.0
-          cache: 'npm'
-      - run: npm install
-      - run: npm run lint
+          cache: 'yarn' # Меняется кеш на 'yarn'
+      - run: yarn install # Меняется npm install на yarn install
+      - run: yarn run lint # Меняется npm run lint на yarn run lint
 
   test:
     runs-on: ubuntu-latest
@@ -35,10 +35,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.14.0
-          cache: 'npm'
-      - run: npm install
+          cache: 'yarn' # Меняется кеш на 'yarn'
+      - run: yarn install # Меняется npm install на yarn install
       
-
   build:
     needs: [eslint]
 
@@ -53,9 +52,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22.14.0
-          cache: 'npm'
-      - run: npm install
-      - run: npm run build
+          cache: 'yarn' # Меняется кеш на 'yarn'
+      - run: yarn install # Меняется npm install на yarn install
+      - run: yarn run build # Меняется npm run build на yarn run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
