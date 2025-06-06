@@ -38,6 +38,13 @@ export default class Game {
             this.goblin.remove();
             this.currentScore += 1;
             this.score.textContent = `Попадания: ${this.currentScore}`;
+        } else {
+            this.missCount += 1;
+            this.miss.textContent = `Промахи: ${this.missCount}`;
+            if (this.missCount > 4) {
+                this.stop();
+                this.modal.show();
+            }
         }
     }
 
